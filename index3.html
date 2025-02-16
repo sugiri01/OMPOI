@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMPOI - Digital Twin of Indian Traditional Markets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --bg: #ffffff;
+            --slide-padding: 3rem;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: var(--slide-padding);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .title-slide {
+            background-image: url('https://source.unsplash.com/1600x900/?market,traditional');
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .content-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .metric {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            margin: 0.5rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .metric:hover {
+            background: var(--secondary);
+        }
+
+        .sub-points {
+            margin-left: 2rem;
+            border-left: 2px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        .icon {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --slide-padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-box {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Slide -->
+    <div class="slide title-slide">
+        <h1><i class="fas fa-store icon"></i>OMPOI</h1>
+        <h2>Digital Twin of Indian Traditional Markets</h2>
+        <div class="content-box">
+            <p><i class="fas fa-sync-alt icon"></i>Revolutionizing B2B Trade in Traditional Markets</p>
+            <span class="metric"><i class="fas fa-users icon"></i>100+ Sellers</span>
+            <span class="metric"><i class="fas fa-map-marked-alt icon"></i>7 Major Markets</span>
+            <span class="metric"><i class="fas fa-brain icon"></i>AI-Powered</span>
+        </div>
+        <a href="#problem" class="btn">Explore More</a>
+    </div>
+
+    <!-- Problem Slide -->
+    <div class="slide" id="problem" style="background-image: url('https://source.unsplash.com/1600x900/?challenge,market');">
+        <h1><i class="fas fa-exclamation-triangle icon"></i>The Problem</h1>
+        <h2>Current Challenges in Traditional Market Operations</h2>
+        <div class="content-box">
+            <ul>
+                <li><i class="fas fa-ban icon"></i><span class="highlight">Limited Market Access:</span> Retail shopkeepers can only visit ~10 shops per day, severely restricting their options and market visibility.</li>
+                <li><i class="fas fa-handshake-slash icon"></i><span class="highlight">Quality & Trust Issues:</span> Buyers heavily depend on individual seller relationships and face significant quality verification challenges.</li>
+                <li><i class="fas fa-tasks icon"></i><span class="highlight">Operational Inefficiencies:</span> Traditional wholesale markets suffer from fragmented information flow and complex logistics management.</li>
+            </ul>
+        </div>
+        <a href="#solution" class="btn">Next</a>
+    </div>
+
+    <!-- Solution Slide -->
+    <div class="slide" id="solution" style="background-image: url('https://source.unsplash.com/1600x900/?solution,technology');">
+        <h1><i class="fas fa-lightbulb icon"></i>OMPOI Solution</h1>
+        <h2>Digital Twin of Traditional Markets with Physical Presence</h2>
+        <div class="content-box">
+            <ul>
+                <li><i class="fas fa-globe icon"></i><span class="highlight">Comprehensive Digital Marketplace</span>
+                    <div class="sub-points">
+                        <p>Virtual replica enabling access to 100+ sellers</p>
+                    </div>
+                </li>
+                <li><i class="fas fa-hands-helping icon"></i><span class="highlight">Hybrid Operational Model</span>
+                    <div class="sub-points">
+                        <p>Physical presence in major market hubs</p>
+                        <p>Real-time video quality verification (30 min)</p>
+                        <p>Advanced lab testing (48-hour turnaround)</p>
+                    </div>
+                </li>
+                <li><i class="fas fa-robot icon"></i><span class="highlight">AI-Powered Market Intelligence</span>
+                    <div class="sub-points">
+                        <p>Weather impact analysis</p>
+                        <p>Demand forecasting</p>
+                        <p>Multi-language support</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#market" class="btn">Next</a>
+    </div>
+
+    <!-- Market Opportunity Slide -->
+    <div class="slide" id="market" style="background-image: url('https://source.unsplash.com/1600x900/?opportunity,business');">
+        <h1><i class="fas fa-chart-line icon"></i>Market Opportunity</h1>
+        <h2>Strategic Phase 1 Implementation</h2>
+        <div class="content-box">
+            <ul>
+                <li><i class="fas fa-bullseye icon"></i><span class="highlight">Target Markets</span>
+                    <div class="sub-points">
+                        <p>7 Major Wholesale Markets</p>
+                        <p>5 Key Manufacturing Hubs</p>
+                    </div>
+                </li>
+                <li><i class="fas fa-crosshairs icon"></i><span class="highlight">Initial Focus</span>
+                    <div class="sub-points">
+                        <p>Grocery segment prototype</p>
+                        <p>Chennai and Bangalore markets</p>
+                        <p>Panruti Cashew manufacturing hub</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#revenue" class="btn">Next</a>
+    </div>
+
+    <!-- Revenue & Vision Slide -->
+    <div class="slide" id="revenue" style="background-image: url('a1.jpg');">
+        <h1><i class="fas fa-money-bill-wave icon"></i>Revenue & Vision</h1>
+        <h2>Building the Future of Traditional Trade</h2>
+        <div class="content-box">
+            <ul>
+                <li><i class="fas fa-coins icon"></i><span class="highlight">Revenue Streams</span>
+                    <div class="sub-points">
+                        <p>0.5% brokerage (vs traditional 1%)</p>
+                        <p>Subscription model</p>
+                        <p>Financial services partnership</p>
+                    </div>
+                </li>
+                <li><i class="fas fa-seedling icon"></i><span class="highlight">Growth Vision</span>
+                    <div class="sub-points">
+                        <p>Pan-India expansion</p>
+                        <p>Enhanced AI-driven intelligence</p>
+                        <p>Comprehensive fintech solutions</p>
+                    </div>
+                </li>
+                <li><i class="fas fa-hand-holding-usd icon"></i><span class="highlight">Value Proposition</span>
+                    <div class="sub-points">
+                        <p>For Buyers: Expanded choices, quality assurance</p>
+                        <p>For Sellers: Wider reach, reduced costs</p>
+                        <p>For Market: Increased transparency & efficiency</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#problem" class="btn">Back to Top</a>
+    </div>
+</body>
+</html>

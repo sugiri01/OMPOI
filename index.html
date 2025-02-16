@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --accent: #3b82f6;
+            --text: #1f2937;
+            --bg: #ffffff;
+            --slide-padding: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: var(--slide-padding);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .title-slide {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title-slide h1 {
+            background: none;
+            -webkit-text-fill-color: white;
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+
+        .title-slide h2 {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 1rem 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .metric {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            margin: 0.5rem;
+            font-weight: 600;
+        }
+
+        .sub-points {
+            margin-left: 2rem;
+            border-left: 2px solid var(--accent);
+            padding-left: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --slide-padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Slide -->
+    <div class="slide title-slide">
+        <h1>OMPOI</h1>
+        <h2>Digital Twin of Indian Traditional Markets</h2>
+        <div class="content-box">
+            <p>Revolutionizing B2B Trade in Traditional Markets</p>
+            <span class="metric">100+ Sellers</span>
+            <span class="metric">7 Major Markets</span>
+            <span class="metric">AI-Powered</span>
+        </div>
+    </div>
+
+    <!-- Problem Slide -->
+    <div class="slide">
+        <h1>The Problem</h1>
+        <h2>Current Challenges in Traditional Market Operations</h2>
+        <div class="content-box">
+            <ul>
+                <li><span class="highlight">Limited Market Access:</span> Retail shopkeepers can only visit ~10 shops per day, severely restricting their options and market visibility.</li>
+                <li><span class="highlight">Quality & Trust Issues:</span> Buyers heavily depend on individual seller relationships and face significant quality verification challenges.</li>
+                <li><span class="highlight">Operational Inefficiencies:</span> Traditional wholesale markets suffer from fragmented information flow and complex logistics management.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Solution Slide -->
+    <div class="slide">
+        <h1>OMPOI Solution</h1>
+        <h2>Digital Twin of Traditional Markets with Physical Presence</h2>
+        <div class="content-box">
+            <ul>
+                <li><span class="highlight">Comprehensive Digital Marketplace</span>
+                    <div class="sub-points">
+                        <p>Virtual replica enabling access to 100+ sellers</p>
+                    </div>
+                </li>
+                <li><span class="highlight">Hybrid Operational Model</span>
+                    <div class="sub-points">
+                        <p>Physical presence in major market hubs</p>
+                        <p>Real-time video quality verification (30 min)</p>
+                        <p>Advanced lab testing (48-hour turnaround)</p>
+                    </div>
+                </li>
+                <li><span class="highlight">AI-Powered Market Intelligence</span>
+                    <div class="sub-points">
+                        <p>Weather impact analysis</p>
+                        <p>Demand forecasting</p>
+                        <p>Multi-language support</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Market Opportunity Slide -->
+    <div class="slide">
+        <h1>Market Opportunity</h1>
+        <h2>Strategic Phase 1 Implementation</h2>
+        <div class="content-box">
+            <ul>
+                <li><span class="highlight">Target Markets</span>
+                    <div class="sub-points">
+                        <p>7 Major Wholesale Markets</p>
+                        <p>5 Key Manufacturing Hubs</p>
+                    </div>
+                </li>
+                <li><span class="highlight">Initial Focus</span>
+                    <div class="sub-points">
+                        <p>Grocery segment prototype</p>
+                        <p>Chennai and Bangalore markets</p>
+                        <p>Panruti Cashew manufacturing hub</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Revenue & Vision Slide -->
+    <div class="slide">
+        <h1>Revenue & Vision</h1>
+        <h2>Building the Future of Traditional Trade</h2>
+        <div class="content-box">
+            <ul>
+                <li><span class="highlight">Revenue Streams</span>
+                    <div class="sub-points">
+                        <p>0.5% brokerage (vs traditional 1%)</p>
+                        <p>Subscription model</p>
+                        <p>Financial services partnership</p>
+                    </div>
+                </li>
+                <li><span class="highlight">Growth Vision</span>
+                    <div class="sub-points">
+                        <p>Pan-India expansion</p>
+                        <p>Enhanced AI-driven intelligence</p>
+                        <p>Comprehensive fintech solutions</p>
+                    </div>
+                </li>
+                <li><span class="highlight">Value Proposition</span>
+                    <div class="sub-points">
+                        <p>For Buyers: Expanded choices, quality assurance</p>
+                        <p>For Sellers: Wider reach, reduced costs</p>
+                        <p>For Market: Increased transparency & efficiency</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
