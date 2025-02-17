@@ -238,7 +238,6 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        /* Navigation dots */
         .nav-dots {
             position: fixed;
             right: 2rem;
@@ -262,6 +261,17 @@
         .nav-dot.active {
             background: var(--primary);
             transform: scale(1.3);
+        }
+
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient);
+            z-index: 1000;
+            width: 0;
+            transition: width 0.3s ease;
         }
 
         @media (max-width: 768px) {
@@ -298,32 +308,6 @@
                 padding: 0.75rem 1.5rem;
             }
         }
-
-        /* Scroll Progress Bar */
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background: var(--gradient);
-            z-index: 1000;
-            width: 0;
-            transition: width 0.3s ease;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.1);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--gradient);
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -336,7 +320,6 @@
         <div class="nav-dot" data-slide="4"></div>
     </div>
 
-    <!-- Rest of the HTML remains the same -->
     <!-- Title Slide -->
     <div class="slide title-slide" id="main" style="background-image: url('a6.jpg');"> 
         <h1><i class="fas fa-store icon"></i>OMPOI</h1>
@@ -356,9 +339,23 @@
         <h2>Current Challenges in Traditional Market Operations</h2>
         <div class="content-box">
             <ul>
-                <li><i class="fas fa-ban icon"></i><span class="highlight">Limited Market Access:</span> Retail shopkeepers can only visit ~10 shops per day, severely restricting their options and market visibility.</li>
-                <li><i class="fas fa-handshake-slash icon"></i><span class="highlight">Quality & Trust Issues:</span> Buyers heavily depend on individual seller relationships and face significant quality verification challenges.</li>
-                <li><i class="fas fa-tasks icon"></i><span class="highlight">Operational Inefficiencies:</span> Traditional wholesale markets suffer from fragmented information flow and complex logistics management.</li>
+                <li><i class="fas fa-ban icon"></i><span class="highlight">Limited Market Access:</span> Retail shopkeepers, especially from Tier 2 and 3 cities, face significant barriers in accessing major markets due to language and convenience issues.</li>
+                
+                <li><i class="fas fa-handshake-slash icon"></i><span class="highlight">Market Volatility & Transparency:</span> 
+                    <div class="sub-points">
+                        <p>Lack of real-time market volatility updates</p>
+                        <p>HNIs and MSMEs unable to physically visit markets</p>
+                        <p>No system for buyers to track sellers</p>
+                    </div>
+                </li>
+                
+                <li><i class="fas fa-globe-asia icon"></i><span class="highlight">Market Structure Issues:</span>
+                    <div class="sub-points">
+                        <p>Unregularized market structure limiting international player entry</p>
+                        <p>High brokerage costs (current 2%)</p>
+                        <p>Complex buyer-seller relationship management</p>
+                    </div>
+                </li>
             </ul>
         </div>
         <a href="#solution" class="btn"><i class="fas fa-arrow-down icon"></i>Next</a>
@@ -373,6 +370,8 @@
                 <li><i class="fas fa-globe icon"></i><span class="highlight">Comprehensive Digital Marketplace</span>
                     <div class="sub-points">
                         <p>Virtual replica enabling access to 100+ sellers</p>
+                        <p>Breaking language barriers for wider accessibility</p>
+                        <p>Real-time market volatility tracking</p>
                     </div>
                 </li>
                 <li><i class="fas fa-hands-helping icon"></i><span class="highlight">Hybrid Operational Model</span>
@@ -386,7 +385,7 @@
                     <div class="sub-points">
                         <p>Weather impact analysis</p>
                         <p>Demand forecasting</p>
-                        <p>Multi-language support</p>
+                        <p>Specialized advisory for HNIs and MSMEs</p>
                     </div>
                 </li>
             </ul>
@@ -404,6 +403,7 @@
                     <div class="sub-points">
                         <p>7 Major Wholesale Markets</p>
                         <p>5 Key Manufacturing Hubs</p>
+                        <p>Focus on Tier 2 and 3 cities</p>
                     </div>
                 </li>
                 <li><i class="fas fa-crosshairs icon"></i><span class="highlight">Initial Focus</span>
@@ -411,6 +411,13 @@
                         <p>Grocery segment prototype</p>
                         <p>Chennai and Bangalore markets</p>
                         <p>Panruti Cashew manufacturing hub</p>
+                    </div>
+                </li>
+                <li><i class="fas fa-globe-asia icon"></i><span class="highlight">Market Expansion</span>
+                    <div class="sub-points">
+                        <p>International trade enablement</p>
+                        <p>Cross-regional market integration</p>
+                        <p>Digital infrastructure development</p>
                     </div>
                 </li>
             </ul>
@@ -424,25 +431,27 @@
         <h2>Building the Future of Traditional Trade</h2>
         <div class="content-box">
             <ul>
-                <li><i class="fas fa-coins icon"></i><span class="highlight">Revenue Streams</span>
+                <li><i class="fas fa-coins icon"></i><span class="highlight">Market Transformation</span>
                     <div class="sub-points">
-                        <p>0.5% brokerage (vs traditional 1%)</p>
-                        <p>Subscription model</p>
-                        <p>Financial services partnership</p>
+                        <p>Reducing brokerage from 2% to 0.5%</p>
+                        <p>Market regularization for international trade</p>
+                        <p>Digital platform breaking language barriers</p>
                     </div>
                 </li>
-                <li><i class="fas fa-seedling icon"></i><span class="highlight">Growth Vision</span>
+                
+                <li><i class="fas fa-chart-line icon"></i><span class="highlight">Advanced Market Intelligence</span>
                     <div class="sub-points">
-                        <p>Pan-India expansion</p>
-                        <p>Enhanced AI-driven intelligence</p>
-                        <p>Comprehensive fintech solutions</p>
+                        <p>Real-time market volatility tracking</p>
+                        <p>Specialized advisory for HNIs and MSMEs</p>
+                        <p>Digital seller tracking system</p>
                     </div>
                 </li>
-                <li><i class="fas fa-hand-holding-usd icon"></i><span class="highlight">Value Proposition</span>
+
+                <li><i class="fas fa-handshake icon"></i><span class="highlight">Enhanced Value Proposition</span>
                     <div class="sub-points">
-                        <p>For Buyers: Expanded choices, quality assurance</p>
-                        <p>For Sellers: Wider reach, reduced costs</p>
-                        <p>For Market: Increased transparency & efficiency</p>
+                        <p>For HNIs/MSMEs: Remote market access and intelligence</p>
+                        <p>For Tier 2/3 Cities: Breaking geographical barriers</p>
+                        <p>For International Players: Regulated market entry</p>
                     </div>
                 </li>
             </ul>
